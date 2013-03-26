@@ -337,7 +337,7 @@ static int s3c_pm_prepare(void)
 
 	s3c_pm_check_prepare();
 
-	disable_hlt();
+	//disable_hlt();
 
 	if (pm_prepare)
 		return pm_prepare();
@@ -350,7 +350,7 @@ static void s3c_pm_finish(void)
 	if (pm_finish)
 		pm_finish();
 
-	enable_hlt();
+	//enable_hlt();
 		
 	s3c_pm_check_cleanup();
 }
